@@ -1,0 +1,175 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script language=javascript src="dialog.js"></script>
+<link href='dialog.css' type='text/css' rel='stylesheet'>
+
+<script language=javascript>
+
+var sAction = "INSERT";
+var sTitle = "插入";
+
+var oControl;
+var oSeletion;
+var sRangeType;
+
+var sUrl = "http://";
+var sScrolling = "";
+var sFrameBorder = "0";
+var sMarginHeight = "0";
+var sMarginWidth = "0";
+var sWidth = "500";
+var sHeight = "400";
+
+oSelection = dialogArguments.eWebEditor.document.selection.createRange();
+sRangeType = dialogArguments.eWebEditor.document.selection.type;
+
+if (sRangeType == "Control") {
+	if (oSelection.item(0).tagName == "IFRAME"){
+		sAction = "MODI";
+		sTitle = "修改";
+		oControl = oSelection.item(0);
+		sUrl = oControl.src;
+		sScrolling = oControl.scrolling;
+		sFrameBorder = oControl.frameBorder;
+		sMarginHeight = oControl.marginHeight;
+		sMarginWidth = oControl.marginWidth;
+		sWidth = oControl.width;
+		sHeight = oControl.height;
+	}
+}
+
+
+document.write("<title>网页帧属性(" + sTitle + ")</title>");
+
+function InitDocument(){
+	SearchSelectValue(d_scrolling, sScrolling.toLowerCase());
+
+	d_url.value = sUrl;
+	d_frameborder.value = sFrameBorder;
+	d_marginheight.value = sMarginHeight;
+	d_marginwidth.value = sMarginWidth;
+	d_width.value = sWidth;
+	d_height.value = sHeight;
+
+	adjustDialog();
+}
+
+function ok(){
+	sScrolling = d_scrolling.options[d_scrolling.selectedIndex].value;
+
+	sUrl = d_url.value;
+	if (!IsURL(sUrl)){
+		BaseAlert(d_url, "无效的网页地址！");
+		return;
+	}
+
+	d_frameborder.value = ToInt(d_frameborder.value);
+	d_marginheight.value = ToInt(d_marginheight.value);
+	d_marginwidth.value = ToInt(d_marginwidth.value);
+	sFrameBorder = d_frameborder.value;
+	sMarginHeight = d_marginheight.value;
+	sMarginWidth = d_marginwidth.value;
+
+	var sWidth = "";
+	if (!MoreThanOne(d_width, "无效的帧宽度！")) return;
+	sWidth = d_width.value;
+	var sHeight = "";
+	if (!MoreThanOne(d_height, "无效的帧高度！")) return;
+	sHeight = d_height.value;
+
+	if (sAction == "MODI") {
+		oControl.src = sUrl;
+		oControl.scrolling = sScrolling;
+		oControl.frameBorder = sFrameBorder;
+		oControl.marginHeight = sMarginHeight;
+		oControl.marginWidth = sMarginWidth;
+		oControl.width = sWidth;
+		oControl.height = sHeight;
+	}else{
+		dialogArguments.insertHTML("<iframe src='"+sUrl+"' scrolling='"+sScrolling+"' frameborder='"+sFrameBorder+"' marginheight='"+sMarginHeight+"' marginwidth='"+sMarginWidth+"' width='"+sWidth+"' height='"+sHeight+"'></iframe>");
+	}
+
+	window.returnValue = null;
+	window.close();
+}
+
+
+function MoreThanOne(obj, sErr){
+	var b=false;
+	if (obj.value!=""){
+		obj.value=parseFloat(obj.value);
+		if (obj.value!="0"){
+			b=true;
+		}
+	}
+	if (b==false){
+		BaseAlert(obj,sErr);
+		return false;
+	}
+	return true;
+}
+
+</script>
+
+</HEAD>
+
+<body onload="InitDocument()">
+<table border=0 cellpadding=0 cellspacing=5 id=tabDialogSize><tr><td>
+
+
+<table border=0 cellpadding=0 cellspacing=0 align=center>
+<tr>
+	<td>
+	<fieldset>
+	<legend>属性设置</legend>
+	<table border=0 cellpadding=5 cellspacing=0 width="100%">
+	<tr><td>
+
+		<table border=0 cellpadding=0 cellspacing=2 width="100%">
+		<tr>
+			<td noWrap width="20%">网页地址:</td>
+			<td noWrap width="80%" colspan=4><input type=text id=d_url size=10 value="" style="width:100%"></td>
+		</tr>
+		<tr>
+			<td noWrap width="20%">滚 动 条:</td>
+			<td noWrap width="29%">
+				<select id=d_scrolling size=1 style="width:80px">
+				<option value=''>默认</option>
+				<option value='yes'>有</option>
+				<option value='no'>无</option>
+				</select>
+			</td>
+			<td width="2%">&nbsp;</td>
+			<td noWrap width="20%">边 框 线:</td>
+			<td noWrap width="29%"><input style="width:80px" id=d_frameborder size=10 maxlength=2 value="" ONKEYPRESS="event.returnValue=IsDigit();"></td>
+		</tr>
+		<tr>
+			<td noWrap width="20%">上下边距:</td>
+			<td noWrap width="29%"><input style="width:80px" id=d_marginheight size=10 maxlength=2 value="" ONKEYPRESS="event.returnValue=IsDigit();"></td>
+			<td width="2%">&nbsp;</td>
+			<td noWrap width="20%">左右边距:</td>
+			<td noWrap width="29%"><input style="width:80px" id=d_marginwidth size=10 maxlength=2 value="" ONKEYPRESS="event.returnValue=IsDigit();"></td>
+		</tr>
+		<tr>
+			<td noWrap width="20%">帧 宽 度:</td>
+			<td noWrap width="29%"><input style="width:80px" id=d_width size=10 maxlength=4 value="" ONKEYPRESS="event.returnValue=IsDigit();"></td>
+			<td width="2%">&nbsp;</td>
+			<td noWrap width="20%">帧 高 度:</td>
+			<td noWrap width="29%"><input style="width:80px" id=d_height size=10 maxlength=4 value="" ONKEYPRESS="event.returnValue=IsDigit();"></td>
+		</tr>
+		</table>
+
+	</td></tr>
+	</table>
+	</fieldset>
+	</td>
+</tr>
+<tr><td height=5></td></tr>
+<tr><td noWrap align=right><input type=submit value='确定' id=Ok onclick="ok()">&nbsp;&nbsp;<input type=button value='取消' onclick="window.close();"></td></tr>
+</table>
+
+
+</td></tr></table>
+</BODY>
+</HTML>

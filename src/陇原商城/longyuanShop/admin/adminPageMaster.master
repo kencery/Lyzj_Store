@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="adminPageMaster.master.cs" Inherits="admin_adminPageMaster" %>
+
+<%@ Register src="tool/adminlogo.ascx" tagname="adminlogo" tagprefix="uc1" %>
+
+<%@ Register src="tool/adminlogoleft.ascx" tagname="adminlogoleft" tagprefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>陇原商城后台管理</title>
+    <link href="css/adminmainleft.css" rel="Stylesheet" type="text/css" />
+    <link href="css/adminmain.css" rel="stylesheet" type="text/css" />
+    <link href="css/MainCss.css" rel="Stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="js/adminlogoleft.js"></script>
+<style type="text/css">
+ .logo
+ {
+ 	background:url(../../images/admin_top_bg.gif);
+ 	width:1000px;
+ 	margin:0 auto;
+ 	height:35px;
+ }
+  .logo1
+ {
+ 	width:1000px;
+ 	margin:0 auto;
+ }  
+ .logindaohang
+ {
+ 	margin:0 auto;
+ 	width:1000px;
+ }
+.style1
+{
+
+    width: 1000px;
+    border-style: solid;
+    border-width: 1px;
+}
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="logo"></div>
+        <div class="logo1">
+            <uc1:adminlogo ID="adminlogo2" runat="server" />
+        </div>
+        <div class="logindaohang">
+            <table align="center" cellpadding="0" cellspacing="0" class="style1">
+                <tr>
+                    <td style="width:180px;" valign="top">
+                        <uc2:adminlogoleft ID="adminlogoleft1" runat="server" />
+                    </td>
+                    <td style="padding-top:0px;" valign="top">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

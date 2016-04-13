@@ -1,0 +1,43 @@
+﻿body
+{
+	text-align:center;
+	margin:0 auto;
+}
+ul,li
+{
+	list-style:none;  
+}
+ul
+{
+	padding:0;  
+	margin:0; 
+}
+.hmain
+{
+	background-image:url(../../images/title.gif);
+	background-repeat:repeat-x;
+	width:180px;
+}
+.hmain a
+{
+	text-decoration:none;
+	padding-left:20px;
+	display:block; 
+	display:inline-block;
+	width:160px; 
+	padding-top:3px;
+	padding-bottom:3px;
+	color:Black;
+	background-image:url(../images/collapsed.gif);
+	background-repeat:no-repeat;
+	background-position:4px center;
+}
+.hmain li
+{
+	color:Black;
+	background-color:#EEEEEE;
+}
+.hmain ul
+{
+	display:none;
+}

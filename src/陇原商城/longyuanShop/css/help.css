@@ -1,0 +1,217 @@
+﻿.help
+{
+	width:1002px;
+	height:auto;
+	background:url(../images/help_02.gif) left top no-repeat;
+}
+.help ul
+{
+	margin:3px 0 0 20px;
+	padding:0px;
+}
+.help ul li
+{
+	color:#06F;
+	float:left;
+}
+.helpconter
+{
+	width:1002px;
+	height:auto;
+	float:left;
+	margin:2px auto auto auto;
+}
+.helpleft
+{
+	width:247px;
+	overflow:hidden;
+	float:left;
+}
+.helpleftone
+{
+	width:247px;
+	background:#960;
+}
+.helplefttwo
+{
+	width:247px;
+	height:auto;
+	float:left;
+	background:url(../images/help_24.gif) center top repeat-y;
+}
+.helpsousuo
+{
+	margin:0 5px;
+}
+.helpsousuo div
+{
+	float:left;
+	margin:3px;
+}
+.helpsousuo ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.fclear
+{
+	clear:both;
+	height:1px;
+	overflow:hidden;
+}
+.helpleftthere
+{
+	width:247px;
+	float:left;
+}
+.helpright
+{
+	width:751px;
+	margin:-2px 2px auto auto;
+	float:right;
+}
+.helprightone
+{
+	width:751px;
+}
+.helprighttwo
+{
+	width:751px;
+	height:auto;
+	float:right;
+	background:url(../images/help_29.gif) center top repeat-y;
+}
+.helptab
+{
+	width:730px;
+	height:30px;
+	margin:auto;
+	border-bottom:#C90 3px solid;
+}
+.helptab ul
+{
+	margin-left:5px;
+	padding:0px;
+}
+.helptab ul li
+{
+	float:left;
+	font-size:16px;
+	margin:8px auto auto auto;
+	color:#09F;
+	padding:0px;
+	display:inline;
+}
+.helprighttab
+{
+	width:730px;
+	height:25px;
+	margin:auto;
+	border-bottom:#C90 1px solid;
+}
+.helprighttabwz
+{
+	width:500px;
+	height:28px;
+	float:left;
+}
+.helprighttabwz ul
+{
+	margin:0px;
+	padding:0px;
+}
+.helprighttabwz ul li
+{
+	margin:8px auto auto 50px;
+	padding:0px;
+}
+.helprighttabwaz2
+{
+	width:230px;
+	height:25px;
+	
+}
+.helprighttabwaz2 ul
+{
+
+	padding:0px;
+	margin-right:100px;
+}
+.helprighttabwaz2 ul li
+{
+	margin:8px auto auto auto;
+	padding:0px;
+}
+a:link
+{
+	color: #000000;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #000000;
+	text-decoration: none;
+}
+a:hover
+{
+	color:#FF6600;
+	text-decoration: underline;
+}
+.pageRow
+{
+	text-align:center;
+}
+.helprightthere
+{
+	width:751px;
+}
+.tishixinxi
+{
+	text-align:center;
+}
+.helpline
+{
+	float:left;
+	width:720px;
+	height:30px;
+	margin:auto auto auto 15px;
+	border-bottom:#C90 3px solid;
+	display:inline;
+}
+.helpline ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.helpline ul li
+{
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#666;
+	margin:10px auto auto auto;
+	padding:0px;
+}
+.helprightwz
+{
+	width:700px;
+	height:300px;
+	margin:10px auto auto 25px;
+	float:left;
+	display:inline;
+}
+.helprightwz ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.helprightwz ul li
+{
+	line-height:25px;
+	font-size:14px;
+	margin:0px;
+	padding:0px;
+}

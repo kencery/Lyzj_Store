@@ -1,0 +1,104 @@
+﻿body 
+{
+	margin:0px auto;
+}
+body th td
+{
+	color:#333333;
+	font-size:12px;
+}
+a 
+{
+	color:#333333;
+	text-decoration:none;
+}
+a:hover
+{
+	color:#FF0000;
+	text-decoration:none;
+}
+a:active
+{
+	color:#FF0000;
+	text-decoration:none;
+}
+#menu
+{
+	height:32px;
+	width:1000px;
+	margin-top:8px;
+	background-color:#990000;
+}
+#menu ul
+{
+	margin:auto;
+	width:778px;
+	height:32px;
+	padding:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	list-style-type:none;
+}
+.m_line
+{
+	float:left;
+	width:1px;
+	line-height:32px;
+	background-image:url(../images/line1.gif);
+}
+.m_li
+{
+	float:left;
+	width:114px;
+	line-height:32px; 
+	text-align:center; 
+	margin-right:-2px; 
+	margin-left:-2px;
+}
+.m_li a
+{
+	display:block; 
+	color:#FFFFFF; 
+	width:114px;
+}
+.m_li_a
+{
+	float:left;
+	width:114px; 
+	line-height:32px;
+	text-align:center; 
+	padding-top:3px;
+	font-weight:bold;
+	background-image:url(../images/menu_bg.jpg); 
+	position:relative;
+	height:32px;
+	margin-top:-3px;
+	margin-right:-2px; 
+	margin-left:-2px;
+}
+.m_li_a a{
+	display:block; color:#FF0000; width:114px;
+}
+.smenu
+{
+	width:774px;
+	height:32px;
+	margin:0 auto 0 auto;
+	padding:0px;
+	list-style:none;
+}
+.s_li
+{
+	line-height:32px;
+	display:none;
+	height:32px;
+	width:auto;
+}
+.s_li_a
+{
+	line-height:32px;
+	width:775px;
+	height:32px;
+	display:block;
+}
+

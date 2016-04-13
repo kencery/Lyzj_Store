@@ -1,0 +1,209 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script language=javascript src="dialog.js"></script>
+<link href='dialog.css' type='text/css' rel='stylesheet'>
+<TITLE>文件属性</TITLE>
+
+<script language="javascript">
+function ReturnValue(){
+	var url = d_fromurl.value;
+	var sFilePic = getFilePic(url);
+	var sPicSrc = relativePath2setPath("sysimage/file/"+sFilePic);
+	dialogArguments.insertHTML("<img id=eWebEditor_TempElement_Img border=0 src='"+sPicSrc+"'><a id=eWebEditor_TempElement_Href href='"+url+"' target=_blank>"+d_filename.value+"</a>");
+
+	var oTempElement = dialogArguments.eWebEditor.document.getElementById("eWebEditor_TempElement_Img");
+	oTempElement.src = sPicSrc;
+	oTempElement.removeAttribute("id");
+	
+	oTempElement = dialogArguments.eWebEditor.document.getElementById("eWebEditor_TempElement_Href");
+	oTempElement.href = url;
+	oTempElement.removeAttribute("id");
+	
+	window.returnValue = null;
+	window.close();
+}
+
+function ok(){
+    if(d_checkfromurl.checked)
+    {
+	    GetFileName(d_fromurl.value, "/");
+	    ReturnValue();
+	}
+	else
+	{
+	   UploadSaved(d_file.form1.InsertFilePath.value);
+	}
+}
+// 文件上传完成时执行,带入上传文件名
+function UploadSaved(sPathFileName){
+	d_fromurl.value = sPathFileName;
+	GetFileName(sPathFileName,"/");
+	ReturnValue();
+}
+function getFilePic(url){
+	var sExt;
+	sExt=url.substr(url.lastIndexOf(".")+1);
+	sExt=sExt.toUpperCase();
+	var sPicName;
+	switch(sExt){
+	case "TXT":
+		sPicName = "txt.gif";
+		break;
+	case "CHM":
+	case "HLP":
+		sPicName = "hlp.gif";
+		break;
+	case "DOC":
+		sPicName = "doc.gif";
+		break;
+	case "PDF":
+		sPicName = "pdf.gif";
+		break;
+	case "MDB":
+		sPicName = "mdb.gif";
+		break;
+	case "GIF":
+		sPicName = "gif.gif";
+		break;
+	case "JPG":
+		sPicName = "jpg.gif";
+		break;
+	case "BMP":
+		sPicName = "bmp.gif";
+		break;
+	case "PNG":
+		sPicName = "pic.gif";
+		break;
+	case "ASP":
+	case "JSP":
+	case "JS":
+	case "PHP":
+	case "PHP3":
+	case "ASPX":
+		sPicName = "code.gif";
+		break;
+	case "HTM":
+	case "HTML":
+	case "SHTML":
+		sPicName = "htm.gif";
+		break;
+	case "ZIP":
+		sPicName = "zip.gif";
+		break;
+	case "RAR":
+		sPicName = "rar.gif";
+		break;
+	case "EXE":
+		sPicName = "exe.gif";
+		break;
+	case "AVI":
+		sPicName = "avi.gif";
+		break;
+	case "MPG":
+	case "MPEG":
+	case "ASF":
+		sPicName = "mp.gif";
+		break;
+	case "RA":
+	case "RM":
+		sPicName = "rm.gif";
+		break;
+	case "MP3":
+		sPicName = "mp3.gif";
+		break;
+	case "MID":
+	case "MIDI":
+		sPicName = "mid.gif";
+		break;
+	case "WAV":
+		sPicName = "audio.gif";
+		break;
+	case "XLS":
+		sPicName = "xls.gif";
+		break;
+	case "PPT":
+	case "PPS":
+		sPicName = "ppt.gif";
+		break;
+	case "SWF":
+		sPicName = "swf.gif";
+		break;
+	default:
+		sPicName = "unknow.gif";
+		break;
+	}
+	return sPicName;
+
+}
+
+function GetFileName(url, opt){
+	d_filename.value=url.substr(url.lastIndexOf(opt)+1);
+}
+
+// 图片来源单选点击事件
+function RadioClick(what){
+	if (what=="url"){
+		d_checkfromfile.checked=false;
+		d_fromurl.disabled=false;
+		d_checkfromurl.checked=true;
+	}else{
+		d_checkfromurl.checked=false;
+		d_checkfromfile.checked=true;
+		d_fromurl.disabled=true;
+	}
+}
+function InitDocument(){
+	adjustDialog();
+	d_fromurl.disabled=true;
+}
+
+</script>
+
+
+<BODY onLoad="InitDocument()">
+<table width="382" border=0 cellpadding=0 cellspacing=5 id=tabDialogSize>
+  <tr><td>
+
+
+<table border=0 cellpadding=0 cellspacing=0 align=center>
+<tr>
+	<td>
+	<fieldset>
+	<legend>文件来源</legend>
+	<table border=0 cellpadding=0 cellspacing=0>
+	<tr><td colspan=9 height=5></td></tr>
+	<tr>
+		<td width=7></td>
+		<td width=54 align=right onClick="RadioClick('file')"><input type=radio id="d_checkfromfile" value="1" onClick="RadioClick('file')" checked>上传:</td>
+		<td width=5></td>
+		<td colspan=5>
+		<Script Language=JavaScript>
+		document.write('<iframe id=d_file frameborder=0 src="../JC_Upload.aspx?type=file" width="100%" height="22" scrolling=no></iframe>');
+		</Script>
+		</td>
+		<td width=7></td>
+	</tr>
+	<tr><td colspan=9 height=5></td></tr>
+	<tr>
+		<td width=7></td>
+		<td width=54 align=right onClick="RadioClick('url')"><input type=radio id="d_checkfromurl" value="1" onClick="RadioClick('url')">网络:</td>
+		<td width=5></td>
+		<td colspan=5><input type=text id="d_fromurl" style="width:243px" size=30 value="http://"></td>
+		<td width=7></td>
+	</tr>
+	<tr><td colspan=9 height=5></td></tr>
+	</table>
+	</fieldset>
+	</td>
+</tr>
+<tr><td height=5></td></tr>
+<tr><td noWrap align=right><input type=submit value='确定' id=Ok onClick="ok()">&nbsp;&nbsp;<input type=button value='取消' onClick="window.close();"></td></tr>
+</table>
+
+
+</td></tr></table>
+
+<input type=hidden id=d_filename value="">
+</body>
+</html>

@@ -1,0 +1,289 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script language=javascript src="dialog.js"></script>
+<link href='dialog.css' type='text/css' rel='stylesheet'>
+
+<script language="javascript">
+
+var sAction = "";
+var sTitle = "";
+
+var oControl;
+var oSeletion;
+var sRangeType;
+
+var sImage = "";
+var sRepeat = "";
+var sAttachment = "";
+
+var sCheckFlag = "sys";
+
+if (URLParams['action'] == "other"){
+	sAction = "OTHER"
+	sTitle = "设置"
+	sImage = dialogArguments.d_image.value;
+	sRepeat = dialogArguments.d_repeat.value;
+	sAttachment = dialogArguments.d_attachment.value;
+	sCheckFlag = "url";
+}else{
+	
+	sAction = "INSERT";
+	sTitle = "网页";
+
+	oSelection = dialogArguments.eWebEditor.document.selection.createRange();
+	sRangeType = dialogArguments.eWebEditor.document.selection.type;
+
+	if (sRangeType == "Control") {
+		oControl = GetControl(oSelection, "TABLE");
+	}else{
+		oControl = GetImageParent(oSelection.parentElement());
+	}
+	if (oControl) {
+		switch(oControl.tagName){
+		case "TD":
+			sTitle = "单元格";
+			break;
+		case "TR":
+		case "TH":
+			sTitle = "表格行";
+			break;
+		default:
+			sTitle = "表格";
+			break;
+		}
+		sAction = "MODI";
+		sImage = oControl.style.backgroundImage;
+		sRepeat = oControl.style.backgroundRepeat;
+		sAttachment = oControl.style.backgroundAttachment;
+		sCheckFlag = "url";
+		sImage = sImage.substr(4, sImage.length-5)
+	}
+
+}
+document.write("<title>背景图属性(" + sTitle + ")</title>");
+
+function InitDocument(){
+	SearchSelectValue(d_repeat, sRepeat.toLowerCase());
+	SearchSelectValue(d_attachment, sAttachment.toLowerCase());
+	d_fromurl.value = sImage;
+	RadioClick(sCheckFlag);
+
+	adjustDialog();
+}
+
+function GetImageParent(obj){
+	while(obj!=null && obj.tagName!="TD" && obj.tagName!="TR" && obj.tagName!="TH" && obj.tagName!="TABLE")
+		obj=obj.parentElement;
+	return obj;
+}
+
+function GetControl(obj, sTag){
+	obj=obj.item(0);
+	if (obj.tagName==sTag){
+		return obj;
+	}
+	return null;
+}
+
+function RadioClick(what){
+	switch(what){
+	case "url":
+		d_checkfromurl.checked=true;
+		d_checkfromsys.checked=false;
+		d_checkcancel.checked=false;
+		d_fromurl.disabled=false;
+		d_fromsys.disabled=true;
+		break;
+	case "sys":
+		d_checkfromurl.checked=false;
+		d_checkfromsys.checked=true;
+		d_checkcancel.checked=false;
+		d_fromurl.disabled=true;
+		d_fromsys.disabled=false;
+		break;
+	case "cancel":
+		d_checkfromurl.checked=false;
+		d_checkfromsys.checked=false;
+		d_checkcancel.checked=true;
+		d_fromurl.disabled=true;
+		d_fromsys.disabled=true;
+		break;
+	}
+}
+
+
+function ReturnValue(){
+	if (d_fromurl.value==""){
+		sImage = "";
+		sRepeat = "";
+		sAttachment = "";
+	}else{
+		if (sAction == "OTHER"){
+			sImage = d_fromurl.value;
+		}else{
+			sImage = "url(" + d_fromurl.value + ")";
+		}
+		sRepeat = d_repeat.options[d_repeat.selectedIndex].value;
+		sAttachment = d_attachment.options[d_attachment.selectedIndex].value;
+	}
+
+	switch(sAction){
+	case "MODI":
+		oControl.style.backgroundImage = sImage;
+		oControl.style.backgroundRepeat = sRepeat;
+		oControl.style.backgroundAttachment = sAttachment;
+		break;
+	case "OTHER":
+		dialogArguments.d_image.value = sImage;
+		dialogArguments.d_repeat.value = sRepeat;
+		dialogArguments.d_attachment.value = sAttachment;
+		break;
+	default:
+		dialogArguments.setHTML("<table border=0 cellpadding=0 cellspacing=0 width='100%' height='100%'><tr><td valign=top id='eWebEditor_TempElement_Background'>"+dialogArguments.getHTML()+"</td></tr></table>", true);
+		var oTempElement = dialogArguments.eWebEditor.document.getElementById("eWebEditor_TempElement_Background");
+		oTempElement.style.backgroundImage = sImage;
+		oTempElement.style.backgroundRepeat = sRepeat;
+		oTempElement.style.backgroundAttachment = sAttachment;
+		oTempElement.removeAttribute("id");
+		break;
+	}
+
+	window.returnValue = null;
+	window.close();
+}
+
+function ok(){
+	if (d_checkfromurl.checked){
+		ReturnValue();
+	}
+	if (d_checkfromsys.checked){
+		d_fromurl.value = relativePath2setPath("sysimage/bg/" + d_fromsys.options[d_fromsys.selectedIndex].value);
+		ReturnValue();
+	}
+	if (d_checkcancel.checked){
+		d_fromurl.value="";
+		ReturnValue();
+	}
+}
+
+function DisableItems(){
+	d_checkfromurl.disabled=true;
+	d_checkfromsys.disabled=true;
+	d_checkcancel.disabled=true;
+	d_fromurl.disabled=true;
+	d_fromsys.disabled=true;
+	d_repeat.disabled=true;
+	d_attachment.disabled=true;
+	Ok.disabled=true;
+}
+
+function AbleItems(){
+	d_checkfromurl.disabled=false;
+	d_checkfromsys.disabled=false;
+	d_checkcancel.disabled=false;
+	d_fromurl.disabled=false;
+	d_fromsys.disabled=false;
+	d_repeat.disabled=false;
+	d_attachment.disabled=false;
+	Ok.disabled=false;
+}
+
+</script>
+</HEAD>
+
+<BODY onload="InitDocument()">
+<table border=0 cellpadding=0 cellspacing=5 id=tabDialogSize><tr><td>
+
+<table border=0 cellpadding=0 cellspacing=0 align=center>
+<tr>
+	<td>
+	<fieldset>
+	<legend>图片来源</legend>
+	<table border=0 cellpadding=5 cellspacing=0 width="100%">
+	<tr><td>
+
+		<table border=0 cellpadding=0 cellspacing=2 width="100%">
+		<tr>
+			<td width="20%" noWrap><input type=radio id="d_checkfromurl" onclick="RadioClick('url')"><label for=d_checkfromurl>网络</label>:</td>
+			<td width="80%" noWrap colspan=2><input type=text id="d_fromurl" style="width:100%" size=30 value=""></td>
+		</tr>
+		<tr>
+			<td width="20%" noWrap><input type=radio id="d_checkfromsys" onclick="RadioClick('sys')"><label for=d_checkfromsys>系统</label>:</td>
+			<td noWrap>
+				<select id="d_fromsys" size=1 style="width:80px">
+				<option value="snow.gif" selected>雪花</option>
+				<option value="nature.jpg">自然</option>
+				<option value="clear.jpg">晴朗</option>
+				<option value="glacier.jpg">冰川</option>
+				<option value="fiesta.jpg">节日</option>
+				<option value="birthday.gif">生日</option>
+				<option value="citrus.gif">秋叶</option>
+				<option value="hearts.gif">心型</option>
+				<option value="flower.gif">鲜花</option>
+				<option value="gathering.jpg">花纹</option>
+				<option value="christmas.gif">圣诞节</option>
+				<option value="ivy.gif">常春藤</option>
+				<option value="tech.gif">技术型</option>
+				<option value="maize.jpg">黄色旋纹</option>
+				<option value="grid.gif">绿色方格</option>
+				</select>
+			</td>
+			<td noWrap><input type=radio id="d_checkcancel" onclick="RadioClick('cancel')"><label for=d_checkcancel>取消背景图</label> </td>
+		</tr>
+		</table>
+
+	</td></tr>
+	</table>
+
+	</fieldset>
+	</td>
+</tr>
+<tr><td height=5></td></tr>
+<tr>
+	<td>
+	<fieldset>
+	<legend>显示效果</legend>
+	<table border=0 cellpadding=5 cellspacing=0 width="100%">
+	<tr><td>
+
+		<table border=0 cellpadding=0 cellspacing=2 width="100%">
+		<tr>
+			<td width="20%" noWrap>平铺方式:</td>
+			<td width="29%" noWrap>
+				<select id=d_repeat size=1 style="width:80px">
+				<option value=''selected>默认</option>
+				<option value='repeat'>纵向横向</option>
+				<option value='no-repeat'>不平铺</option>
+				<option value='repeat-x'>横向</option>
+				<option value='repeat-y'>纵向</option>
+				</select>
+			</td>
+			<td width="2%">&nbsp;</td>
+			<td width="20%" noWrap>滚动固定:</td>
+			<td width="29%" noWrap>
+				<select id=d_attachment size=1 style="width:80px">
+				<option value='' selected>默认</option>
+				<option value='scroll'>滚动</option>
+				<option value='fixed'>固定</option>
+				</select>
+			</td>
+
+		</tr>
+		</table>
+	
+	</td></tr>
+	</table>
+	</fieldset>
+	</td>
+</tr>
+<tr><td height=5></td></tr>
+<tr><td noWrap align=right><input type=submit value='确定' id=Ok onclick="ok()">&nbsp;&nbsp;<input type=button value='取消' onclick="window.close();"></td></tr>
+</table>
+
+
+</td></tr></table>
+
+
+</body>
+</html>

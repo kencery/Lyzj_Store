@@ -1,0 +1,460 @@
+﻿body
+{
+	font-size:14px;
+}
+
+.img
+{
+	border:0px;
+}
+a:link
+{
+	color:#000000;
+	text-decoration:none;
+}
+a:hover
+{
+	color:Red;
+	text-decoration:none;
+}
+.watermark
+{
+	color:Gray;
+}
+.main
+{
+	width:1002px;
+	margin:0 auto;
+	overflow:hidden;
+	height:auto;
+}
+.top
+{
+	width:1002px;
+	height:78px;
+	margin:20px;
+	border-bottom:#990000 3px solid;
+}
+.topleft
+{
+	float:left;
+	width:500px;
+	height:77px;
+}
+.topleft img
+{
+	width:353px;
+	height:53px;
+	margin:15px auto auto 50px;
+}
+.topright
+{
+	float:right;
+	width: 500px;
+	height: 74px;
+}
+.topright ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.topright ul li
+{
+	height:25px;
+	text-align:right;
+	margin:0px;
+	padding:55px;
+}
+.topright img
+{
+	float:right;
+	width:89px;
+	height:36px;
+	margin:40px 20px auto 40px;
+}
+.content
+{
+	width:939px;
+	text-align:center;
+	margin:10px auto auto auto;
+	height:auto;
+}
+.contentloginv
+{
+	width:939px;
+	height:auto;
+	margin:auto;
+}
+.contentonev
+{
+	width:939px;
+	height:30px;
+	text-align:center;
+}
+.contentonev img
+{
+	width:939px;
+	height:30px;
+	text-align:center;
+}
+.contenttwov
+{
+	width:939px;
+	height:680px;
+	margin:-10px auto auto auto !important;
+	margin:auto;
+	text-align:center;
+	background:url(../images/login28.gif) center top no-repeat;
+} 
+.conterloginone
+{
+	width:500px;
+	height:60px;
+	margin:5px auto auto auto;
+	background:url(../images/login15.gif) center bottom no-repeat;
+}
+.conterloginone ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.conterloginone ul li
+{
+	margin:10px 5px auto 5px;
+	padding:0px;
+	text-align:center;
+}
+.yanse
+{
+	color:#990099
+
+}
+.logincontent
+{
+	width:900px;
+	height:240px;
+	margin:auto;
+}
+.logincontentdenglu
+{
+	width:900px;
+	height:376px;
+	margin:auto;
+}
+.logincontentv
+{
+	width:900px;
+	height:35px;
+	float:left;
+	background:url(../images/login23.gif) center bottom no-repeat;
+}
+.logincontentv ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	float:left;
+}
+.logincontentv ul li
+{
+	margin:18px;
+	padding:0px;
+}
+.logincontentv img
+{
+	float:left;
+	width:103px;
+	height:33px;
+}
+.loginzcneir
+{
+	width:888px;
+	height:280px;
+	float:left;
+	margin:10px auto auto 3px;
+	border:#e4e4e4 solid 1px;
+}
+.loginzcneirone
+{
+	width:888px;
+	height:60px;
+	margin:10px auto auto auto;
+	border:#cccccc solid 1px;
+}
+.loginzcneironeleft
+{
+	width:328px;
+	height:60px;
+	float:left;
+}
+.loginzcneironeleft1
+{
+	width:314px;
+	height:60px;
+}
+.loginzcneironeleft1 ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.loginzcneironeleft1 ul li
+{
+	margin:15px auto auto 5px;
+	float:left;
+	padding:0px;
+	width: 295px;
+}
+.red
+{
+	color:Red;
+}
+.loginzcneironeright
+{
+	width:560px;
+	height:40px;
+	float:right;
+}
+.loginzcneironeright ul
+{
+	width:530px;
+	height:60px;
+	margin:0px;
+	padding:0px;
+	background:#fff6d3;
+	list-style:none;
+}
+.loginzcneironeright ul li
+{
+	text-align:left;
+	line-height:20px;
+	margin:15px auto auto 5px;
+	padding:0px;
+}
+.loginzc2
+{
+	width:900px;
+	height:180px;
+	margin:25px auto auto auto;
+}
+.loginfoot
+{
+	width:900px;
+	height:30px;
+	margin:20px auto auto auto;
+	float:left;
+}
+.loginbottom
+{
+	width:900px;
+	height:70px;
+	float:left;
+}
+.foot
+{
+	width:1002px;
+	height:170px;
+	background:url(../images/foot.gif) left top no-repeat;
+}
+.footindex
+{
+	width:1000px;
+	height:141px;
+}
+.footindex ul
+{
+	list-style:none;
+	padding:15px;
+}
+.footindex ul li
+{
+	text-align:center;
+	line-height:25px;
+	font-size:12px;
+}
+.logincontentleft
+{
+	width:420px;
+	height:500px;
+	float:left;
+}
+.loginleftbt
+{
+	width:206px;
+	height:63px;
+}
+.loginleftbtneir
+{
+	width:381px;
+	height:300px;
+}
+.loginlefttop
+{
+	width:381px;
+}
+.loginleftbtneircount
+{
+	width:381px;
+	height:auto;
+	float:left;
+	background:url(../images/logo20.gif) left top repeat-x;
+}
+.logindenglu
+{
+	width:370px;
+	height:auto;
+}
+.logindenglu ul
+{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+.logindenglu ul li
+{
+	margin:10px auto auto 35px;
+	float:left;
+	padding:0px;
+	display:inline;
+}
+.logindenglu1
+{
+	width:360px;
+	height:40px;
+	margin:10px auto auto 12px;
+	display:inline;
+	float:left;
+	background:url('../images/anniuline.gif') center bottom no-repeat;
+}
+.logindengluuser
+{
+	width:98px;
+	height:30px;
+	margin:auto auto auto 40px;
+	display:inline;
+	float:left;
+}
+.logindengluuser1
+{
+	width:101px;
+	height:30px;
+	margin:auto auto auto 20px;
+	float:left;
+}
+.logindengluuser1 img
+{
+	border:1px solid white;
+}
+.frientprompt
+{
+	width:360px;
+	height:auto;
+	margin:10px auto auto 12px;
+	display:inline;
+	float:left;
+	overflow:hidden;
+}
+.frientprompt ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.frientprompt ul li
+{
+	font-size:12px;
+	line-height:25px;
+	padding-left:20px;
+	margin:0px;
+	background:url(../images/logo36.gif) left center no-repeat;
+}
+.loginline
+{
+	width:360px;
+	height:3px;
+	margin:4px auto auto 8px;
+	overflow:hidden;
+	float:left;
+	background:#ffcc7b
+}
+.loginleftregister
+{
+	width:480px;
+	height:500px;
+	float:right;
+}
+.loginregister
+{
+	width:19px;
+	height:346px;
+	float:left;
+}
+.loginreguster1
+{
+	width:450px;
+	height:500px;
+	float:right;
+}
+.loginregisteruserphoto
+{
+	width:190px;
+	height:63px;
+}
+.loginregisterfirend
+{
+	width:417px;
+	height:auto;
+}
+.loginregisterfirendtop
+{
+	width:417px;
+}
+.loginregisterfirendcout
+{
+	width:417px;
+	height:280px;
+	float:left;
+	background:url(../images/logo14.gif) left top repeat-y;
+}
+.loginshow
+{
+	width:380px;
+	height:auto;
+	float:left;
+	margin:5px auto auto 15px;
+	display:inline;
+}
+.loginshow ul
+{
+	margin:15px;
+	height:0px;
+	list-style:none;
+}
+.loginshow ul li
+{
+	margin:15px;
+	padding:0px;
+	line-height:25px;
+	background:url(../images/logo32.gif) center bottom no-repeat;
+}
+.registerphoto
+{
+	width:380px;
+	height:80px;
+	margin:30px auto auto 100px;
+	float:left;
+	display:inline;
+}
+.registerphoto img
+{
+	width:161px;
+	height:34px;
+	margin:130px auto auto auto;
+	border:1px solid white;
+}
+.logoconterlinerightfoot
+{
+	width:471px;
+}

@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="proscenium_AcceptAddrInfo_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>陇原商城个人信息管理</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1000px;
+            height:auto;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" cellpadding="0" cellspacing="0" class="style1">
+            <tr>
+                <td colspan="2">
+                    <img src="../images/LogoMaker .png" alt="陇原" width="1000" height="80" /></td>
+            </tr>
+             <tr>
+             <td colspan="2">
+                    <img src="../images/baner1.GIF" alt="陇原" width="1000" style="height: 30px" /></td>
+            </tr>
+            <tr>
+                <td style="width:15%; margin-left:20px;">
+                    <asp:TreeView ID="TreeView1" runat="server" ImageSet="Contacts" NodeIndent="10" >
+                        <ParentNodeStyle Font-Bold="True" ForeColor="#5555DD" />
+                        <HoverNodeStyle Font-Underline="False" />
+                        <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" 
+                            VerticalPadding="0px" />
+                        <Nodes>
+                            <asp:TreeNode Text="陇原商城首页" Value="陇原商城首页" 
+                                NavigateUrl="~/proscenium/Index.aspx" Target="_blank"></asp:TreeNode>
+                            <asp:TreeNode Text="退出系统" Value="退出系统" NavigateUrl="~/user/UserLogin.aspx" ></asp:TreeNode>
+                            <asp:TreeNode Text="会员资料" Value="新建节点">
+                                <asp:TreeNode Text="收货地址管理" Value="收货地址管理" 
+                                    NavigateUrl="~/proscenium/AcceptAddrInfo/ManageAcceptAddr.aspx"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/proscenium/AcceptAddrInfo/AddAcceptAddr.aspx" 
+                                    Text="添加收货地址" Value="添加收货地址"></asp:TreeNode>
+                                <asp:TreeNode Text="删除收货地址" Value="删除收货地址" 
+                                    NavigateUrl="~/proscenium/AcceptAddrInfo/ManageAcceptAddr.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="修改收货地址" Value="修改收货地址" 
+                                    NavigateUrl="~/proscenium/AcceptAddrInfo/ManageAcceptAddr.aspx"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="我的订单" Value="我的订单">
+                                <asp:TreeNode Text="订单管理" Value="订单管理" 
+                                    NavigateUrl="~/proscenium/AcceptAddrInfo/ManagerOrderList.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="订单明细" Value="订单明细" 
+                                    NavigateUrl="~/proscenium/AcceptAddrInfo/OrderList.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="付款" Value="付款" 
+                                    NavigateUrl="~/proscenium/AcceptAddrInfo/OrderList.aspx"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="我的收藏夹" Value="我的收藏夹">
+                                <asp:TreeNode Text="管理收藏产品" Value="管理收藏产品"></asp:TreeNode>
+                                <asp:TreeNode Text="删除产品" Value="删除产品"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="修改会员资料" Value="修改会员资料">
+                                <asp:TreeNode Text="修改密码" Value="修改密码" 
+                                    NavigateUrl="~/proscenium/User/UpdatePassword.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="修改用户信息" Value="修改用户信息"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="积分管理" Value="积分管理">
+                                <asp:TreeNode Text="积分管理" Value="积分管理"></asp:TreeNode>
+                                <asp:TreeNode Text="购买积分" Value="购买积分"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </Nodes>
+                        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" 
+                            HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+                </td>
+                <td valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,340 @@
+﻿body 
+{
+	width:1002px;
+	background:#ffffff;
+	padding:0px;
+	margin:0px;
+	font-size:12px;
+	font:宋体
+}
+a:link
+{
+	color:#000000;
+	text-decoration:none;
+}
+a:hover
+{
+	color: #B00000;
+	text-decoration:none;
+}
+ul
+{
+	list-style:none;
+}
+li
+{
+	list-style:none;
+}
+#main
+{
+	width:1002px;
+	background:#ffffff;	
+	margin:0 auto;
+}
+#top
+{
+	width:1002px;
+	height:175px;
+	margin:0px;
+	padding:0px;
+}
+#tophone
+{
+	width:1002px;
+	height:72px;
+}
+#topleft
+{
+	width:400px;
+	height:65px;
+	margin-left:20px;
+	background:url(../images/shoppingmeun.gif) -85px 0px no-repeat;
+	float:left;
+}
+#topright
+{
+	width:546px;
+	height:32px;
+	background:url(../images/index11.jpg) left top no-repeat;
+	float:right;
+}
+#topright ul
+{
+	float:left;
+	margin:0px;
+	height:0px;
+	overflow:hidden;
+	height:23px;
+}
+#topright ul li
+{
+	margin:10px 0px auto 3px;
+	float:left;
+	padding:0px;
+}
+.fonts
+{
+	width:124px;
+	overflow:hidden;
+	float:left;
+}
+.register 
+{
+	width:60px;
+	height:30px;
+	float:left;
+	margin:0px 0px auto 10px;
+	padding:0px;
+}
+#registerlogin
+{
+	margin:3px;
+}
+.enroll
+{
+	width:60px;
+	height:30px;
+	float:left;
+	margin:0px 0px auto 10px;
+	padding:0px;
+}
+.shopping
+{
+	width:275px;
+	height:24px;
+	float:right;
+	margin:0px;
+	padding:0px;
+}
+.shopping ul
+{
+	width:60px;
+	margin:0px;
+	padding:0px;
+}
+.shopping ul li
+{
+	margin:0px 5px auto auto;
+	padding:0px;
+}
+.photo
+{
+	float:left;
+	width:2px;
+	height:23px;
+	margin:4px 2px 0px 3px;
+	padding:0px;
+}
+.topbus
+{
+	float:right;
+	width:550px;
+	height:35px;
+	margin:2px auto auto auto;
+	padding:0px;
+}
+.topbus ul
+{
+	margin:15px auto auto auto;
+	padding:0px;
+}
+.topbus ul li
+{
+	margin:0px 6px auto auto;
+	float:left;
+	padding:0px;
+}
+.car
+{
+	float:left;
+	width:40px;
+	height:30px;
+}
+.navigation
+{
+	width:1002px;
+	height:108px;
+	margin:auto auto auto 3px;
+	padding:0px;
+	background:url(../images/shoppingmeun.jpg) -7px -73px no-repeat;
+}
+.navigationone
+{
+	width:735px;
+	height:30px;
+	margin-left:140px;
+	padding:0px;
+}
+.navigationtwo
+{
+	width:753px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	float:left;
+}
+.navigationline
+{
+	width:2px;
+	height:22px;
+	margin:5px 3px auto auto;
+	padding:0px;
+	float:left;
+	background:url(../images/shoppingmeun.jpg) -40px -26px no-repeat;
+}
+.navigationtwo ul
+{
+	float:left;
+	margin:0px;
+	height:0px;
+}
+.navigationtwo ul li
+{
+	margin:10px 5px auto 5px;
+	padding:0px;
+	color:#B5181B;
+}
+.navigationlinecenter
+{
+	width:1002px;
+	height:63px;
+	margin:7px;
+	padding:0px;
+}
+.index
+{
+	width:68px;
+	height:30px;
+	float:left;
+	margin:20px auto auto 35px !important;
+	margin:20px auto auto 20px;
+	padding:0px;
+}
+.navigationlinecentertwo
+{
+	width:735px;
+	height:25px;
+	margin:5px auto auto 30px;
+	float:left;
+	padding:0px;
+}
+.navigationlinecentertwoindex
+{
+	float:left;
+	width:735px;
+	height:25px;
+	margin:auto auto auto 5px;
+	padding:0px;
+}
+.navigationlinecentertwoindex ul
+{
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+.navigationlinecentertwoindex ul li
+{
+	margin:4px 2px auto 5px;
+	padding:0px;
+}
+.mennavline
+{
+	float:left;
+	width:2px;
+	height:15px;
+	margin:5px 3px auto 3px;
+	padding:0px;
+	background:url(../images/shoppingmeun.jpg) -586px -38px no-repeat;
+}
+.sousuo
+{
+	width:758px;
+	height:28px;
+	margin:5px 3px 3px 135px;
+	float:left;
+	padding:0px;
+}
+.sousuoleft
+{
+	width:400px;
+	height:28px;
+	margin:0px;
+	padding:0px;
+	float:left;
+}
+.prompt
+{
+	margin:4px 5px auto 5px;
+	float:left;
+	padding:0px;
+}
+.promptkuan
+{
+	width:104px;
+	float:left;
+	margin:3px auto auto 0px;
+	padding:0px;
+}
+.go
+{
+	width:27px;
+	height:21px;
+	margin:3px auto auto 100px!important;
+	margin:3px auto auto 5px;
+	padding:0px;
+	float:left;
+}
+.gaojisousuo 
+{
+	float:right;
+	width:192px;
+	height:26px;
+	margin:3px 3px auto auto;
+}
+.sousuoright
+{
+	float:right;
+	width:319px;
+	height:30px;
+	margin: -1px 13px auto auto!important;
+	margin: -1px 5px auto auto;
+	padding:0;
+	background:url(../images/shoppingmeun.jpg) -680px -190px no-repeat;
+}
+.sousuotwo
+{
+	margin:auto auto auto 20px!important;
+	margin:auto auto auto 10px;
+	padding:0;
+}
+.sousuotwo ul
+{
+	float:left;
+	margin:8px auto auto 10px!important;
+	margin:9px auto auto 10px;
+	padding:0;
+}
+.sousuotwo ul li
+{
+	margin:0;
+	padding:0;
+}
+.yanse
+{
+	color:#0000FF;
+}
+.sousuorightline
+{
+	float:left;
+	width:2px;
+	height:20px;
+	margin:4px auto auto 4px;
+	padding:0;
+	background:url(../images/shoppingmeun.jpg) -801px -36px no-repeat;
+}
+.logophoto
+{
+	width:994px;
+	height:80px;
+	background-image:url(../images/5136a87b.jpg);
+}

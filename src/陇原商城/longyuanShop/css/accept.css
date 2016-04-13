@@ -1,0 +1,112 @@
+﻿.AdminNav
+{
+	position:relative;
+	background:url(../images/admnNavImg.png) left -13px no-repeat;
+	margin:0 auto;
+	padding-left:4px
+}
+.AdminNav div
+{
+	background:url(../images/admnNavImg.png) right -13px no-repeat;
+	padding-right:4px;
+	margin:0 auto;
+}
+.AdminNav ul
+{
+	background:url(../images/admnNavImg.png) repeat-x 0 -49px;
+	height:33px;
+	position:relative;
+	padding-left:2px;
+	list-style:none;
+	margin:0 auto;
+}
+.AdminNav li
+{
+	float:left;
+	text-decoration:none;
+	line-height:33px;
+	font-size:14px;
+}
+.AdminNav li a
+{
+	display:block;
+	width:120px;
+	font-size:14px;
+	font-weight:700;
+	height:33px;
+	line-height:33px;
+	position:relative;
+	text-align:center;
+}
+.AdminNav li a:hover, .AdminNav li a:active
+{
+	background:transparent url(../images/admnNavImg.png) no-repeat left -92px;
+	color:#FFF;
+	text-decoration:none;
+}
+.AdminNav li .now a:link, .AdminNav li .now a:visited
+{
+	background:transparent url(../images/admnNavImg.png) no-repeat left -92px;
+	color:#FFF;
+}
+.AdminContent
+{
+	border:1px solid #40A2E9;
+	padding:5px;
+}
+.AdminTable
+{
+	width:100%;
+}
+.AdminTable .AdminTableTitle
+{
+	line-height:30px;
+	background:#CCC;
+	color:Maroon;
+	text-align:center;
+	font-size:22px;
+	padding-left:5px;
+	font-weight:bold;
+}
+.red
+{
+	color:Red;
+}
+.AdminTable .FieldName
+{
+	width:120px;
+	color:#333;
+	text-align:right;
+	font-size:15px;
+	line-height:22px;
+	padding:5px;
+}
+.AdminTable .FieldValue
+{
+	line-height:22px;
+	padding:5px;
+	text-align:left;
+}
+.noinfo
+{
+	line-height:55px;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	color:Red;
+}
+.OrderBtnPay
+{
+	width:55px;
+	height:18px;
+	padding:0px;
+	margin:0px;
+	border:none;
+	cursor:pointer;
+	background:url(../images/OrderBtnPay.gif) no-repeat;
+}
+.pageRow
+{
+	text-align:center;
+	margin:5px auto;
+}

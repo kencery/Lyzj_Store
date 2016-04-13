@@ -1,0 +1,315 @@
+﻿.products
+{
+	width:1002px;
+	height:694px;
+}
+.productsone
+{
+	width:1002px;
+	height:auto;
+}
+.productsleft
+{
+	width:201px;
+	float:left;
+	height:481px;
+	margin:auto auto auto -3px;
+}
+.productsnews
+{
+	width:202px;
+	height:480px;
+	margin:15px auto auto auto;
+}
+.productsright
+{
+	float:right;
+	width:auto;
+	margin:auto 2px auto auto;
+}
+.productsrighttop
+{
+	width:785px;
+	height:8px;
+}
+.productsrightcont
+{
+	width:785px;
+	height:auto;
+	margin:auto auto auto -1px;
+	background:url(../images/Products_22.gif) left top repeat-y;
+}
+.productsdetails
+{
+	width:785px;
+	line-height:37px;
+	margin:auto;
+	background:url(../images/Productsgoumaibz_10.gif) 4px top no-repeat;
+}
+.ProDetails
+{
+	height:300px;
+	margin:2px 8px;
+}
+.ProDetails .ProImg
+{
+	float:left;
+	background:#FFF;
+	border:1px solid #D1D1D1;
+	padding:2px;
+}
+.ProDetails .ProImg div
+{
+	width:300px;
+	height:300px;
+}
+.ProDetails .ProImg div img
+{
+	display:block;
+	width:300px;
+	height:300px;
+}
+.ProDetails .ProParameter
+{
+	width:450px;
+	height:303px;
+	float:right;
+}
+.ProDetails .ProParameter tr td
+{
+	height:28px;
+	line-height:28px;
+}
+.ProDetails .ProParameter .name
+{
+	width:80px;
+	padding-right:5px;
+	text-align:right;
+}
+
+.ProDetails .ProParameter .value
+{
+	width:120px;
+	text-align:left;
+}
+.red
+{
+	color:Red;
+}
+.cartline
+{
+	width:430px;
+	height:2px;
+	float:left;
+	margin:10px auto auto 5px;
+	background:#B30000;
+	overflow:hidden;
+}
+.detailstwo
+{
+	width:785px;
+	height:auto;
+	overflow:hidden;
+	margin:10px auto auto auto;
+}
+.detailstwo1
+{
+	width:765px;
+	height:39px;
+	overflow:hidden;
+	margin:auto auto auto 5px; 
+
+}
+.detailstwo2
+{
+	width:765px;
+	height:40px;
+	margin:5px auto auto 10px;
+	border-bottom:#CCCCCC 2px solid;
+}
+.detailstwobz
+{
+	width:100px;
+	height:30px;
+	float:left;
+	margin:9px auto auto 15px;
+	overflow:hidden;
+	background:url(../images/Productsgoumaizz_06.gif) -191px -82px no-repeat;
+}
+.detailstwobz ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.detailstwobz ul li
+{
+	margin:10px auto auto 15px;
+	color:#333333;
+	padding:0px;
+}
+.tuijian
+{
+	width:200px;
+	height:300px;
+	background:#FFDEAD;
+	margin:5px auto auto auto;
+	overflow:hidden;
+}
+.tuijian ul
+{
+	list-style:none;
+	margin:auto auto auto 10px;
+	padding:0px;
+}
+.tuijian ul li
+{
+	width:220px;
+	color:#336EE6;
+	line-height:30px;
+	margin:0px;
+	padding:0px;
+	background:url(../images/shopping_87.gif) left bottom no-repeat;
+}
+.detailsfor
+{
+	width:750px;
+	height:auto;
+	margin:10px auto auto auto;
+}
+.productsrightfoot
+{
+	width:786px;
+	height:16px;
+}
+.produstsleftone
+{
+	width:217px;
+	height:37px;
+	background:url(../images/Products_02.gif) left top no-repeat;
+}
+.produstsleftone ul
+{
+	float:left;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+.produstsleftone ul li
+{
+	margin:14px auto auto 37px;
+	padding:0;
+	color:#990000;
+}
+.productslefttwo
+{
+	width:217px;
+	height:auto;
+	background:url(../images/Products_09.gif) left top repeat-y;
+}
+.productsnav
+{
+	width:180px;
+	height:auto;
+	margin:auto;
+}
+.productsleftfoot
+{
+	width:210px;
+	height:13px;
+}
+.productsrighttheir
+{
+	margin-left:8px;
+}
+.productsrighttheir1
+{
+	width:770px;
+	border-top:3px solid #FF96DB;
+	border-bottom:3px solid #FF96DB;
+	margin:0 auto; 
+	padding-top:5px; 
+	padding-bottom:3px;
+}
+.produstsrightneir1 ul
+{
+	float:left;
+	list-style:none;
+    margin:0; 
+    padding-left:5px;
+	width: 150px;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.produstsrightneir1 ul li 
+{
+	line-height:22px;
+	float:left;
+	color:#AC0086;
+}
+.produstsrightneir1r
+{
+	 line-height:22px; 
+	 float:right;
+	height: 25px;
+}
+.fclear
+{
+}
+.productsonechanpin
+{
+	width:760px;
+	margin:auto;
+}
+.produstsonechanpin1
+{
+	float:left;
+	width:120px;
+	height:220px;
+	margin:5px 5px auto auto;
+}
+.produstschanpinone
+{
+	padding:3px;
+	width:110px;
+	height:110px;
+	margin:0;
+	border:#D7D7D7 1px solid;
+}
+.produstschanpinone img
+{
+	 width:110px;
+	 height:110px;
+}
+.produstschanpinonewenzi
+{
+	overflow:hidden;
+	width:111px;
+	height:20px;
+	margin:5px auto auto auto;
+}
+.produstschanpinonewenzi ul
+{
+	float:left;
+	margin:3px auto auto auto;
+	padding:0;
+	list-style:none;
+	background:url(../images/Productstt_26.gif) left top no-repeat;
+}
+.produstschanpinonewenzi ul li
+{
+	float:left;
+	margin:0 0 0 10px;
+	padding:0;
+}
+.produstschanpinoneQQ
+{
+	width:142px;
+	height:22px;
+	margin:3px auto auto auto;
+}
+.produstschanpinonewenzi2
+{
+	margin-top:-6px;
+}

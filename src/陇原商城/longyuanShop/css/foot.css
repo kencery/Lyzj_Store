@@ -1,0 +1,26 @@
+﻿body 
+{
+	width:1002px;
+	font-size:12px;
+	background:#FFFFFF;
+}
+ul
+{
+	list-style:none;
+}
+.foot
+{
+	width:1002px;
+	height:170px;
+	background:url(../images/foot.gif) left top no-repeat;
+}
+.footindex
+{
+	width:850px;
+	height:95px;
+}
+.footindex ul li
+{
+	line-height:25px;
+	text-align:center;
+}

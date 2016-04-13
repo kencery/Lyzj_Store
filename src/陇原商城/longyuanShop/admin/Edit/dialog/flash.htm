@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script language=javascript src="dialog.js"></script>
+<link href='dialog.css' type='text/css' rel='stylesheet'>
+<TITLE>Flash动画属性</TITLE>
+
+<script language="javascript">
+
+function ReturnValue(){
+	var sFromUrl = d_fromurl.value;
+	var sWidth = d_width.value;
+	var sHeight = d_height.value;
+	
+	var sHTML = "<OBJECT codeBase=http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0 classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000";
+	if (sWidth!="") sHTML+=" width="+sWidth;
+	if (sHeight!="") sHTML+=" height="+sHeight;
+	sHTML+="><PARAM NAME=movie VALUE='"+sFromUrl+"'><PARAM NAME=quality VALUE=high><embed src='"+sFromUrl+"' quality=high pluginspage='http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' type='application/x-shockwave-flash'";
+	if (sWidth!="") sHTML+=" width="+sWidth;
+	if (sHeight!="") sHTML+=" height="+sHeight;
+	sHTML+=">"+sFromUrl+"</embed></OBJECT>";
+	
+	dialogArguments.insertHTML(sHTML);
+
+	window.returnValue = null;
+	window.close();
+}
+
+function ok(){
+	d_width.value=ToInt(d_width.value);
+	d_height.value=ToInt(d_height.value);
+	if(d_checkfromurl.checked)
+	{
+	    ReturnValue();
+	}
+	else
+	{
+	    UploadSaved(d_file.form1.InsertFilePath.value);
+	}
+}
+// 使所有输入框无效
+function DisableItems(){
+	d_checkfromfile.disabled=true;
+	d_checkfromurl.disabled=true;
+	d_fromurl.disabled=true;
+	d_width.disabled=true;
+	d_height.disabled=true;
+	Ok.disabled=true;
+}
+function InitDocument(){
+	adjustDialog();
+	d_fromurl.disabled=true;
+}
+// 文件上传完成时执行,带入上传文件名
+function UploadSaved(sPathFileName){
+	d_fromurl.value = sPathFileName;
+	ReturnValue();
+}
+// 来源单选点击事件
+function RadioClick(what){
+	if (what=="url"){
+		d_checkfromfile.checked=false;
+		d_fromurl.disabled=false;
+		d_checkfromurl.checked=true;
+	}else{
+		d_checkfromurl.checked=false;
+		d_checkfromfile.checked=true;
+		d_fromurl.disabled=true;
+	}
+}
+</script>
+</HEAD>
+
+<BODY onLoad="InitDocument()">
+<table border=0 cellpadding=0 cellspacing=5 id=tabDialogSize><tr><td>
+
+
+<table border=0 cellpadding=0 cellspacing=0 align=center>
+<tr>
+	<td>
+	<fieldset>
+	<legend>Flash来源</legend>
+	<table border=0 cellpadding=5 cellspacing=0 width="100%">
+		<tr><td>
+
+			<table border=0 cellpadding=0 cellspacing=2 width="100%">
+			<tr>
+				<td noWrap width="20%"><input type=radio id="d_checkfromfile" value="1" onClick="RadioClick('file')" checked><label for=d_checkfromurl>上传</label>:</td>
+				<td noWrap width="80%">
+                <iframe id=d_file frameborder=0 src="../JC_Upload.aspx?type=flash" width="100%" height="22" scrolling=no></iframe>
+				</td>
+			</tr>
+			<tr>
+				<td noWrap width="20%"><input type=radio id="d_checkfromurl" value="1" onClick="RadioClick('url')"><label for=d_checkfromurl>网络</label>:</td>
+				<td noWrap width="80%"><input type=text id='d_fromurl' style='width:100%;' size=30 value=''></td>
+			</tr>
+			</table>
+
+		</td></tr>
+		</table>
+	</fieldset>
+	</td>
+</tr>
+<tr><td height=5></td></tr>
+<tr>
+	<td>
+	<fieldset>
+	<legend>显示效果</legend>
+	<table border=0 cellpadding=5 cellspacing=0 width="100%">
+	<tr><td>
+
+		<table border=0 cellpadding=0 cellspacing=2 width="100%">
+		<tr>
+			<td noWrap width="20%">显示宽度:</td>
+			<td noWrap width="29%"><input style="width:80px" type=text id=d_width size=10 value="" ONKEYPRESS="event.returnValue=IsDigit();" maxlength=4></td>
+			<td width="2%">&nbsp;</td>
+			<td noWrap width="20%">显示高度:</td>
+			<td noWrap width="29%"><input style="width:80px" type=text id=d_height size=10 value="" ONKEYPRESS="event.returnValue=IsDigit();" maxlength=4></td>
+		</tr>
+		</table>
+
+	</td></tr>
+	</table>
+	</fieldset>
+	</td>
+</tr>
+<tr><td height=5></td></tr>
+<tr><td noWrap align=right><input type=submit value='确定' id=Ok onClick="ok()">&nbsp;&nbsp;<input type=button value='取消' onClick="window.close();"></td></tr>
+</table>
+
+
+</td></tr></table>
+
+</body>
+</html>

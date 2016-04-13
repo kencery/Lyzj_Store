@@ -1,0 +1,9 @@
+body,a,table,div,span,td,th,input,select,p,li,textarea{font-size:9pt;font-family:ËÎÌו, Verdana, Arial, Helvetica, sans-serif}
+body { padding: 0px;background-color:#d4d0c8}
+td {line-height:150%}
+body.upload {margin:0px}
+
+.imgButton {border:1px solid #f5f5f4;}
+.imgButtonOver {border:1px solid #0A246A; background-color:#b6bdd2;cursor:hand;}
+.imgButtonOut {border:1px solid #f5f5f4;}
+.imgButtonDown {border:1px inset;}

@@ -1,0 +1,159 @@
+﻿BODY {
+	background-color: #ffffff;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size: 9pt;
+}
+.INPUT {
+	BACKGROUND-COLOR: #ffffff;
+	BORDER-BOTTOM: #666666 1px solid;
+	BORDER-LEFT: #666666 1px solid;
+	BORDER-RIGHT: #666666 1px solid;
+	BORDER-TOP: #666666 1px solid;
+	COLOR: #666666;
+	HEIGHT: 18px;
+	border-color: #666666 #666666 #666666 #666666;
+	font-size: 9pt;
+	font-family: "宋体";
+}
+SELECT {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: 宋体,Dotum,DotumCh, Arial;
+}
+TD {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: 宋体,Dotum,DotumChe,Arial;line-height: 150%; 
+}
+A:link {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: 宋体,Dotum,DotumCh, Arial; TEXT-DECORATION: none;line-height: 150%; 
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: 宋体,Dotum,DotumCh, Arial; TEXT-DECORATION: none;line-height: 150%; 
+}
+A:active {
+	FONT-SIZE: 12px; COLOR: #6440da; FONT-FAMILY: 宋体,Dotum,DotumCh, Arial; TEXT-DECORATION: none;line-height: 150%; 
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: #6440da; FONT-FAMILY: 宋体,Dotum,DotumCh, Arial; TEXT-DECORATION: underline;line-height: 150%; 
+}
+.font {
+	font-size: 9px;
+	color: #FF0000;
+	text-decoration: none;
+	background-color: #f2f2f2;
+}
+
+
+.input_login
+{
+  border-right: #ffffff 0px solid; border-top: #ffffff 0px solid; font-size: 9pt;
+  border-left: #ffffff 0px solid; border-bottom: #ffffff 0px solid; height: 16px;
+}
+.input_val
+{
+  border-right: #ffffff 0px solid; border-top: #ffffff 0px solid; font-size: 9pt;
+  border-left: #ffffff 0px solid; border-bottom: #c0c0c0 1px solid; height: 16px;
+  background-color: #fdfdfd;
+}
+
+.input_submit {
+	font-size: 9pt;
+	border: 1px solid #DEDFDE;
+	background-color: #ffffff;
+	}
+.input_text {
+	font-size: 9pt;
+	border: 1px solid #DEDFDE;
+	}
+.input_text1 {
+	font-size: 9pt;
+	border: 1px solid #000000;
+	background-color: #FFFFFF;
+	}
+
+	
+
+/* 网站整个背景的定义 */
+.border_bg {
+	background-color: #FFFFFF;width: 100%;
+}
+.copy {
+	color: #FFFFFF;
+	background-color: #000000;
+}
+.bgtop_center {
+	background: url(../images/bgtop_center.gif);
+	height: 20px;
+}
+.bgbottom_center {
+	background: url(../images/bgbottom_center.gif);
+	height: 20px;
+}
+.bgleft_center {
+	background: url(../images/bgleft_center.gif);
+	width: 20px;
+}
+.bgright_center {
+	background: url(../images/bgright_center.gif);
+	width: 20px;
+}
+.bgleft_top {
+	background: url(../images/bgleft_top.gif);
+	height: 20px;width: 20px;
+}
+.bgcenter_left {
+	background: url(../images/bgcenter_left.gif);
+	height: 34px;width: 20px;
+}
+.bgcenter_center {
+	background: url(../images/bgcenter_center.gif);
+}
+.bgcenter_right {
+	background: url(../images/bgcenter_right.gif);
+	height: 34px;width: 20px;
+}
+.bgleft_bottom {
+	background: url(../images/bgleft_bottom.gif);
+	height: 20px;width: 20px;
+}
+.bgright_top {
+	background: url(../images/bgright_top.gif);
+	height: 20px;width: 20px;
+}
+.bgright_bottom {
+	background: url(../images/bgright_bottom.gif);
+	height: 20px;width: 20px;
+}
+/* 左栏背景图案的定义 */
+.left_top {
+	background: url(../images/left_top.gif);
+	height: 8px;
+}
+.left_main {
+	background: url(../images/left_main.gif);
+	padding-left:8px;padding-right:8px;
+}
+.left_bottom {
+	background: url(../images/left_bottom.gif);
+	height: 8px;
+}
+.left_tdbg {
+	background: #F5F5F5;
+}
+/* 点颜色的定义 */
+.style1 {color: #019ADA;line-height: 150%;}
+.style2 {color: #FF6600;line-height: 150%;}
+.style3 {color: #F2F0ED;line-height: 150%;}
+.style4 {color: #FF0000;line-height: 150%;}
+.style5 {color: #FF0000;font-weight: bold;line-height: 150%;}
+
+/* 中栏背景图案的定义 */
+.main_tdbg {
+	background: #F5F5F5;border: 1px solid #DCDCDC;line-height: 150%;
+}
+.main_title {
+	color: #000000;font-weight:bold;line-height: 150%;
+}
+.main_tdbgmain {
+	background: #FDFDFD;line-height: 150%;
+}

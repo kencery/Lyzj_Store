@@ -1,0 +1,150 @@
+﻿body 
+{
+	margin:0 auto;
+	padding:0px;
+	font:12px;
+}
+body>div
+{
+	margin-left:auto;
+	margin-right:auto;
+}
+.AdminNav 
+{
+	position:relative;
+    background:url(../../images/admnNavImg.png) no-repeat left -13px;
+    padding-left:4px; 
+    width:820px;
+    float:left;
+    margin:0 auto;
+}
+.AdminNav div 
+{
+	background:url(../../images/admnNavImg.png) no-repeat right -13px; 
+	padding-right:4px; 
+	margin:0 auto;
+}
+.AdminNav ul
+{
+	 position:relative;
+	 height:33px; 
+	 background:url(../../images/admnNavImg.png) repeat-x 0 -49px; 
+	 padding-left:2px; 
+	 margin:0 auto;
+}
+.AdminNav li
+{
+	float:left; 
+	font-size:14px;
+	line-height:33px;
+	height: 31px;
+}
+
+.AdminNav li a 
+{ 
+	display:block; 
+	width:100px; 
+	font-size:14px; 
+	font-weight:700;
+	height:33px; 
+	line-height:33px; 
+	position:relative;
+	text-align:center;
+	top: -1px;
+	}
+.AdminNav li a:hover, .AdminNav li a:active 
+{
+	background:transparent url(../../images/admnNavImg.png) no-repeat left -92px;
+	color:#FFF;
+	text-decoration:none;
+}
+.AdminNav li .now a:link, .AdminNav li.now a:visited
+ {
+ 	background:transparent url(../../images/admnNavImg.png) no-repeat left -92px;
+ 	color:#FFF;
+ }
+ 
+ #LoginBar ul li
+ {
+ 	list-style-type:none;
+ }
+#LoginBar 
+{ 
+	position: absolute;
+    left:50%; 
+    Top:50%;
+    margin-top: -210px; 
+    z-index: 1; 
+    margin-left: -220px;
+    width: 600px; 
+    Height: 420px 
+}
+#LoginBar .LoginTop 
+{
+	line-height:15px; 
+	height:15px;
+	background:url(../../images/LoginTop.gif) no-repeat;
+}
+#LoginBar .LoginBottom
+{
+	line-height:15px;
+    height:15px;
+    background:url(../../images/LoginBottom.gif) no-repeat;
+}
+.FormNav 
+{
+	background:url(../../images/LoginCenter.gif) repeat-y left top;
+}
+.FormNav dl 
+{
+	background:url(../../images/key.gif) no-repeat 0 22px;
+	 padding:30px 30px 30px 100px;
+	 }
+.FormNav dt,.FormNav dd 
+{
+    line-height:35px;
+    height:40px;
+	margin-left: 0px;
+}
+.FormNav label 
+{
+	 padding-right:15px;
+	 font-size:14px;
+	 color:#666; 
+	 font-weight:bold;
+}
+.FormNav dd img  
+{
+	cursor:pointer; 
+	vertical-align:middle;
+}
+
+.FormBase,.FormFocus,.FormCode,.formnoborder
+{
+	 font-family:Arial, Helvetica, sans-serif;
+	 background-color: #fff; 
+	 padding:0.2em 0;
+	 border:1px double #ccc;
+}
+.formnoborder  
+{
+	background:transparent; 
+	border:1px solid #FFF;
+}
+*html .FormBase,*html .FormFocus,*html .FormCode,*html .formnoborder 
+{
+	height:22px; 
+	padding:0; 
+	line-height:22px;
+}
+*+html .FormBase,*+html .FormFocus,*+html .FormCode,*+html .formnoborder 
+{
+	height:22px;
+	padding:0;
+	line-height:22px;
+}
+.FormFocus  
+{
+	border: 1px double #3399ff; 
+	background-color: #c0ddfc;
+}
